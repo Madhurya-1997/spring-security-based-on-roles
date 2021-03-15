@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.antMatchers("/user").permitAll()
 		.antMatchers("/user/add").permitAll()
 		.and().authorizeRequests()
-		.antMatchers("/user/**").authenticated().and().httpBasic();
+		.antMatchers("/user/**", "/post/**").authenticated().and().httpBasic();
 	}
 	
 	@Bean
